@@ -1,0 +1,12 @@
+﻿// Styles for the Page Device Login.
+
+@import "../blocks/_fonts.scss";
+@import "../blocks/_colors.scss";
+@import "../blocks/_buttons.scss";
+@import "../blocks/_flair.scss";
+
+.device_id {
+    color: $c_girl;
+    font-weight: 700;
+    margin-top: 0;
+}

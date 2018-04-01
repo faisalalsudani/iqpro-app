@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "IQPRO",
+  "short_name": "IQPRO",
+  "version": "com.example.iqpro",
+  "description": "IQ-PRO sample app to share the iraqi players news and information.",
+  "author": "F4DESIGN",
+  "icons": [],
+  "start_url": "index.html"
+}

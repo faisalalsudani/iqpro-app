@@ -1,0 +1,103 @@
+/* This is SASS Stuff */
+
+@import "blocks/colors";
+@import "blocks/fonts";
+@import "blocks/buttons";
+
+$font-stack: Roboto, Helvetica, sans-serif;
+
+// Pages
+@import "pages/_page-login-device.scss";
+@import "pages/_page-login-user.scss";
+@import "pages/_page-main-page.scss";
+
+// Shadows // To Right || To Bottom || Gradient || Feather
+// 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); // More shadow
+
+body {
+  font-family: 'Changa', sans-serif;
+  background-image: url(../images/body_bg.png);
+}
+
+.navbar {
+  display: block;
+}
+
+.bg-dark {
+  background-image: url(../images/top_menu_bg.png);
+}
+
+#news-content {
+  margin: 0 auto;
+  widows: 100%;
+}
+
+#nav-tabs {
+  text-align: center;
+  text-align: center;
+  background: #e5011c;
+  color: white;
+  width: 100%;
+  margin-left: 0px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+
+  h4 {
+    font-size: 15px;
+    border: solid 1px;
+    padding: 10px;
+  }
+
+  .active h4 {
+    background: white;
+    color:black;
+  }
+}
+
+.navbar-toggler {
+  float: right;
+  margin-top: 1rem;
+}
+
+.show {
+  margin-top: 50px;
+  color: white;
+}
+
+.card {
+  text-align: right;
+  direction: rtl;
+}
+
+.btn-red {
+  background-color: #e5011c;
+  color: #fff !important;
+}
+
+.single-post {
+  margin-bottom: 10px;
+
+  .post-title {
+    font-size: 15px;
+    line-height: 2rem;
+  }
+
+  .card-text {
+    text-align: justify;
+  }
+}
+
+.glyphicon.spinning {
+    animation: spin 1s infinite linear;
+    -webkit-animation: spin2 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(360deg); }
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}

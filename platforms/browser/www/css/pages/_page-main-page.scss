@@ -1,0 +1,132 @@
+﻿// Main page.
+
+@import "../blocks/_fonts.scss";
+@import "../blocks/_colors.scss";
+@import "../blocks/_buttons.scss";
+@import "../blocks/_flair.scss";
+
+#inzet-nav {
+    width: 100%;
+    background-color: $c_white;
+    border-bottom: 1px solid $c_girl;
+    box-shadow: $shadow-button;
+    margin: 0;
+
+    .inzet-nav {
+        .glyphicon {
+            color: $c_boy;
+            font-size: 1.4em;
+            text-align: center;
+            margin: 0.4em 0.7em 0.4em 0.7em;
+        }
+    }
+
+    .inzet-date {
+        h4, h5, h6 {
+            color: $c_boy_dark;
+            font-size: 1.3em;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+}
+
+#inzet {
+    .inzet-part {
+        background-color: $c_white;
+        border-bottom: 1px solid $c_girl;
+        box-shadow: $shadow-button;
+        margin-top: 0.7em;
+
+        .inzet-time {
+            .inzet-time-start {
+                font-weight: 700;
+                text-align: right;
+            }
+
+            .inzet-time-duration {
+                font-weight: 500;
+                text-align: right;
+            }
+        }
+
+        .inzet-client {
+            .inzet-client, .inzet-street, .inzet-zip-city, .inzet-phone {
+                margin-top: 0;
+                margin-bottom: 0.3em;
+            }
+
+            .inzet-client {
+                margin-top: 0.2em;
+                border-bottom: 1px solid $c_girl;
+            }
+
+            .inzet-phone {
+                margin-bottom: 0.5em
+            }
+        }
+    }
+}
+
+// Hier komt de planning style
+#planning {
+    table {
+        width: 100%;
+        height: 30%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        background-color: $c_white;
+
+        tr:first-child {
+            background-color: $c_boy;
+            border-bottom: 1px solid $c_boy;
+            font-weight: bold;
+            color: $c_white;
+        }
+
+        td:nth-last-child(2), td:last-child {
+            background-color: rgba(0, 0, 0, 0.06);
+        }
+
+        tr:first-child, tr {
+            td {
+                width: 14.2857%;
+                height: 50px;
+                // min-height: 3em;
+            }
+        }
+
+        tr {
+            .inz-date {
+                background-color: rgba($c_neut, 0.3);
+                color: $c_text_dark;
+            }
+
+            .today {
+                width: auto;
+                height: auto;
+
+                h4, h5, h6 {
+                    width: 30px;
+                    height: 30px;
+                    margin: auto;
+                    padding-top: 0.4em;
+                    border: 1px solid $c_girl_dark !important;
+                    border-radius: 100%;
+                }
+            }
+
+            .dossier-day {
+                background-color: $c_boy;
+            }
+
+            .inz-shown {
+                background-color: $c_girl !important;
+                color: $c_white;
+                font-weight: bold;
+            }
+        }
+    }
+}

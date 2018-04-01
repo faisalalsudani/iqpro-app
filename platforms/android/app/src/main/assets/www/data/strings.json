@@ -1,0 +1,52 @@
+{
+  "btn_company": "Bedrijf",
+  "btn_login": "Login",
+  "btn_settings": "URL",
+  "btn_Sign_Up": "Aanmelden",
+  "btn_ok": "OK",
+  "btn_cancel": "Annuleren",
+  "btn_save": "Opslaan",
+  "hour_short": "u",
+  "modal_company_content": "Vul hier de URL in die je van je systeembeheerder hebt gekregen.",
+  "modal_company_header": "Serveradres",
+  "nav_main_menu": "Hoofdmenu",
+  "nav_dossier": "Dossier",
+  "company_name": "Bedrijfsnaam",
+  "input_hint_company": "Bedrijfsnaam of afkorting",
+  "input_retry_company": "Geen match, probeer nogmaals",
+  "input_hint_pin": "5 cijfers",
+  "pin_code": "Accouche Pin Code:",
+  "password": "Wachtwoord",
+  "error_aanmelden": "Aanmelden mislukt!",
+  "wrong_pin" : "Geen medewerker geselecteerd of pincode onjuist!",
+
+  "ziekenhuis_title" : "Ziekenhuis: ",
+
+  "username": "Gebruikersnaam",
+  "deviceuuid": "Uw apparaat ID",
+  "set_url": "URL",
+  "set_url_hint": "Vul hier uw bedrijfs URL in",
+  "days": ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"],
+  "days_short": ["Ma", "Di", "Wo", "Do", "Vr", "Za", "Zo" ],
+  "months": [ "jan", "feb", "mrt", "apr", "jun", "jul", "aug", "sept", "okt", "nov", "dec" ],
+
+
+  "menu_tabs": ["Client", "Notitie", "Betrokkenen", "Uren"],
+  "menu_content": ["Client content", "Memos content"],
+
+  "gebortedatum_title": "Geboortedatum: ",
+  "bevalling_datum_title": "Bevallingsdatum: ",
+  "aterme_title": "A-termedatum: ",
+  "inzorg_title": "Datum in zorg: ",
+  "memo_datum_title": "Aangemaakt op: ",
+  "new_memo": "Nieuwe notitie toevoegen",
+  "memo_save": "Notitie toevoegen",
+  "important_memo": "Belangrijk notitie",
+  "empty_fields": "Vul de verplichte velden",
+
+  "user_feedback_not_clickable": "Het is nu niet mogelijk om dit dossier te bekijken",
+  "user_message_login_error" : "U heeft niks geselecteerd,<br>of verkeerde wachtwoord ingevuld!",
+  "no_connection" : "Controleer uw netwerkverbindingen",
+  "reload_page" : "Pagina opnieuw laden",
+  "uren_tab" : ["Klant", "Datum", "Aantal uren"]
+}

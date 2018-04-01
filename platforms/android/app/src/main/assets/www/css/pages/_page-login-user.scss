@@ -1,0 +1,47 @@
+﻿// Login user
+
+@import "../blocks/_fonts.scss";
+@import "../blocks/_colors.scss";
+@import "../blocks/_buttons.scss";
+@import "../blocks/_flair.scss";
+
+.user-selectable {
+
+}
+
+
+#login {
+    .form-group {
+        label {
+            color: $c_grey;
+        }
+
+        margin-bottom: 0;
+    }
+
+    .user-selectable {
+        margin-bottom: 0.5em;
+
+        h4 {
+            color: $c_girl;
+            background-color: $c_white;
+            font-weight: 500;
+            border: 1px solid $c_girl;
+            padding-top: 0.4em;
+            padding-left: 0.25em;
+            padding-bottom: 0.25em;
+            margin-top: 0.25em;
+            margin-bottom: 0;
+            box-shadow: $shadow-button;
+        }
+    }
+
+    .selected {
+        h4 {
+            color: $c_white;
+            background-color: $c_girl;
+            font-weight: 400;
+            border: 1px solid $c_girl;
+        }
+    }
+}

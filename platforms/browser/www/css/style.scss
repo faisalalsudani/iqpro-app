@@ -1,0 +1,42 @@
+/* This is SASS Stuff */
+
+@import "blocks/colors";
+@import "blocks/fonts";
+@import "blocks/buttons";
+
+$font-stack: Roboto, Helvetica, sans-serif;
+
+// Pages
+@import "pages/_page-login-device.scss";
+@import "pages/_page-login-user.scss";
+@import "pages/_page-main-page.scss";
+
+// Shadows // To Right || To Bottom || Gradient || Feather
+// 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); // More shadow
+
+.navbar {
+  display: block;
+}
+
+.navbar-toggler {
+  float: right;
+  margin-top: 1rem;
+}
+
+.show {
+  margin-top: 50px;
+  color: white;
+}
+
+.posts-container {
+  text-align: right !important;
+
+  .single-post {
+    font-family: 'Changa', sans-serif;
+
+    h4 {
+      font-size: 15px;
+      line-height: 2rem;
+    }
+  }
+}

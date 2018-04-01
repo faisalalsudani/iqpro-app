@@ -1,0 +1,34 @@
+﻿// Button Styles
+
+@import "colors";
+@import "flair";
+
+$shadow-button: 2px 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+.btn {
+    width: 100%;
+    box-shadow: $shadow-button;
+}
+
+.btn-primary {
+  background-color: $c_boy_dark;
+  border-color: $c_boy_dark;
+}
+
+.btn-default {
+  color: $c_girl;
+  font-weight: bold;
+  border-color: $c_girl;
+}
+
+
+.btn-company, .btn-login, .btn-back {
+    margin-top: 0.5em;
+}
+
+
+.btn-url {
+    background-color: $c_boy_light;
+    border: $c_boy_light;
+    color: $c_white;
+}
