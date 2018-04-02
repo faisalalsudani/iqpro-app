@@ -44,11 +44,13 @@ var MainMenu = {
     let menu_ul = createElement("ul", "navbar-nav");
 
     for (var i = 0; i < con.lang.main_menu.length; i++) {
-      let menu_li = createElement("li", "nav-item");
+      let menu_li = createElement("li", "nav-item", "nav-item-" + i);
       menu_li.innerHTML = con.lang.main_menu[i];
 
       if (i === 1) {
         menu_li.addEventListener("click", function() {
+          $('#players-container').remove();
+
           nextPage("AllPlayers", con);
           document.getElementById("navbarText").classList.remove("show");
         });
