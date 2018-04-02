@@ -1,8 +1,7 @@
 var MainMenu = {
   load: function (con) {
-    console.log(con);
+    (con);
     let row = createElement("div", "row", "main-menu");
-    this.getPlayersData(con);
     Connection.getPosts(con, this.showPosts, this.onError);
 
     // Create sub nav.
@@ -19,7 +18,6 @@ var MainMenu = {
   },
 
   // top nav_bar
-
   topNavbar: function () {
     let header = createElement("header");
     let top_navbar = createElement("div", "navbar navbar-expand-lg navbar-dark bg-dark")
@@ -28,6 +26,8 @@ var MainMenu = {
     navbar_logo.setAttribute("href", "#");
     navbar_logo.innerHTML = "IQ-PRO";
     top_navbar.appendChild(navbar_logo);
+
+
 
     let navbar_toggler = createElement("button", "navbar-toggler");
     navbar_toggler.setAttribute("type", "button");
@@ -42,15 +42,35 @@ var MainMenu = {
 
     let menu_collapse_div = createElement("div", "collapse navbar-collapse", "navbarText");
     let menu_ul = createElement("ul", "navbar-nav");
-    let menu_li = createElement("li", "nav-item");
-    menu_li.innerHTML = "HOME";
-    menu_ul.appendChild(menu_li);
+
+    for (var i = 0; i < con.lang.main_menu.length; i++) {
+      let menu_li = createElement("li", "nav-item");
+      menu_li.innerHTML = con.lang.main_menu[i];
+
+      if (i === 1) {
+        menu_li.addEventListener("click", function() {
+          nextPage("AllPlayers", con);
+          document.getElementById("navbarText").classList.remove("show");
+        });
+      }
+      menu_ul.appendChild(menu_li);
+    }
+
+
     menu_collapse_div.appendChild(menu_ul);
     top_navbar.appendChild(menu_collapse_div);
     top_navbar_jus.appendChild(top_navbar);
     header.appendChild(top_navbar_jus);
 
     return header;
+  },
+
+  /**
+   * Let's get to the settings screen.
+   */
+  backToSettings: function (con) {
+      $('header').empty()
+      nextPage("MainMenu", con);
   },
 
   /**
@@ -120,7 +140,6 @@ var MainMenu = {
     waiting_for_response.innerHTML = "الرجاء الأنتظار ";
     waiting_for_response.appendChild(waiting_for_response_span);
 
-    console.log(posts);
     if (posts !== undefined) {
       for (var i = 0; i < posts.length; i++) {
         let single_post = createElement("div", "row single-post", posts[i].id);
@@ -137,6 +156,16 @@ var MainMenu = {
         post_excerpt.innerHTML = post_excerpt_txt_trim;
         let post_read_more = createElement("a", "btn btn-red");
         post_read_more.innerHTML = "أقرا المزيد";
+
+        // This slightly ugly way works to get the value stored that we need later on.
+        let post_id = JSON.parse(JSON.stringify(posts[i]));
+
+
+        post_read_more.addEventListener("click", function () {
+            con.current_post_id = JSON.parse(JSON.stringify(post_id));
+            nextPage("Dossier", con);
+        });
+
         singl_post_card.appendChild(single_post_card_image);
         single_post_card_body.appendChild(post_title);
         single_post_card_body.appendChild(post_excerpt);
@@ -222,6 +251,7 @@ var MainMenu = {
         post_excerpt.innerHTML = post_excerpt_txt_trim;
         let post_read_more = createElement("a", "btn btn-red");
         post_read_more.innerHTML = "أقرا المزيد";
+
         singl_post_card.appendChild(single_post_card_image);
         single_post_card_body.appendChild(post_title);
         single_post_card_body.appendChild(post_excerpt);
@@ -231,18 +261,13 @@ var MainMenu = {
         posts_container.appendChild(single_post);
       }
     } else {
-      $("#news-content").append(waiting_for_response);
+        $("#news-content").append(waiting_for_response);
     }
 
     $("#news-content").append(posts_container);
   },
 
-  getPlayersData: function () {
-    // console.log(con);
-    console.log(con.players);
-  },
-
   onError: function () {
-    console.log("error");
+    ("error");
   }
 }
