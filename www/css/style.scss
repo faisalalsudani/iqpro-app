@@ -135,7 +135,10 @@ body {
   text-align: right;
 
   h4 {
-    font-size: 15px;
+    color: red;
+    font-size: 16px;
+    margin-bottom: 20px !important;
+    margin-top: 20px;
     line-height: 2rem;
   }
 
@@ -167,7 +170,7 @@ body {
     }
 
     iframe {
-      widows: 100%;
+      width: 100%;
     }
 
   }

@@ -71,7 +71,7 @@ var MainMenu = {
    * Let's get to the settings screen.
    */
   backToSettings: function (con) {
-      $('header').empty()
+      $('header').remove()
       nextPage("MainMenu", con);
   },
 
@@ -137,7 +137,7 @@ var MainMenu = {
     let posts_container = createElement("div", "container posts-container", "posts-container");
     let posts = con.posts;
 
-    let waiting_for_response = createElement("button", "btn btn-lg btn-warning");
+    let waiting_for_response = createElement("button", "btn btn-lg btn-red");
     let waiting_for_response_span = createElement("span", "glyphicon glyphicon-refresh spinning");
     waiting_for_response.innerHTML = "الرجاء الأنتظار ";
     waiting_for_response.appendChild(waiting_for_response_span);
@@ -188,7 +188,7 @@ var MainMenu = {
     let news_content = document.getElementById("news-content");
     $(news_content).empty()
 
-    let waiting_for_response = createElement("button", "btn btn-lg btn-warning");
+    let waiting_for_response = createElement("button", "btn btn-lg btn-red");
     let waiting_for_response_span = createElement("span", "glyphicon glyphicon-refresh spinning");
     waiting_for_response.innerHTML = "الرجاء الأنتظار ";
     waiting_for_response.appendChild(waiting_for_response_span);
@@ -230,7 +230,7 @@ var MainMenu = {
     let news_content = document.getElementById("news-content");
     $(news_content).empty()
 
-    let waiting_for_response = createElement("button", "btn btn-lg btn-warning");
+    let waiting_for_response = createElement("button", "btn btn-lg btn-red");
     let waiting_for_response_span = createElement("span", "glyphicon glyphicon-refresh spinning");
     waiting_for_response.innerHTML = "الرجاء الأنتظار ";
     waiting_for_response.appendChild(waiting_for_response_span);
