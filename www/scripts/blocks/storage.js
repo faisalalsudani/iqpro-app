@@ -20,14 +20,6 @@ var Storage = {
      */
     retrieveSettings: function (con, callback) {
         let storage = window.localStorage;
-        let user_settings = JSON.parse(storage.getItem("user_preffs"));
-
-        if (user_settings !== null) {
-            if (user_settings.server_call_success) {
-                con.settings.server_call_success = true;
-                con.settings.server_url = user_settings.server_url;
-            }
-        }
 
         callback();
     }

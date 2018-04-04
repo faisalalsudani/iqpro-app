@@ -16,8 +16,6 @@ requirejs([
     "blocks/buttons",
     "blocks/modals",
     "blocks/connection",
-    "blocks/storage",
-    "blocks/accouche",
 
     // Pages
     "pages/main-menu",
@@ -69,7 +67,8 @@ var App = {
      * Get me some settings, the once that were stored.
      */
     loadSettings: function () {
-        Storage.retrieveSettings(con, App.onAppReady);
+        // Storage.retrieveSettings(con, App.onAppReady);
+        App.onAppReady(con);
     },
 
 

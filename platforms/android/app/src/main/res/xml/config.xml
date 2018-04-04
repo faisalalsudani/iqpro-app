@@ -6,10 +6,10 @@
     </feature>
     <name>IQPRO</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        IQ-PRO sample app to share the iraqi players news and information.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="f4desiign@gmail.com" href="http://iq-pro.net">
+        F4DESIGN
     </author>
     <content src="index.html" />
     <access origin="*" />

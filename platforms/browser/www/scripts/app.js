@@ -16,12 +16,12 @@ requirejs([
     "blocks/buttons",
     "blocks/modals",
     "blocks/connection",
-    "blocks/storage",
-    "blocks/accouche",
 
     // Pages
     "pages/main-menu",
     "pages/dossier",
+    "pages/all-players",
+    "pages/player",
 
 ], function (util) {
 
@@ -67,7 +67,8 @@ var App = {
      * Get me some settings, the once that were stored.
      */
     loadSettings: function () {
-        Storage.retrieveSettings(con, App.onAppReady);
+        // Storage.retrieveSettings(con, App.onAppReady);
+        App.onAppReady(con);
     },
 
 
@@ -76,6 +77,7 @@ var App = {
      */
     onAppReady: function() {
         console.log("App Ready");
+        nextPage("MainMenu", con);
 
         document.addEventListener("pause", onPause, false);
         document.addEventListener("resume", onResume, false);
@@ -99,8 +101,6 @@ var App = {
 
         function dataSuccess(data) {
           con.players = data.val();
-
-          nextPage("MainMenu", con);
         };
 
         function dataError(err) {
