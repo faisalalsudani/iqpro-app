@@ -162,7 +162,6 @@ var MainMenu = {
         // This slightly ugly way works to get the value stored that we need later on.
         let post_id = JSON.parse(JSON.stringify(posts[i]));
 
-
         post_read_more.addEventListener("click", function () {
             con.current_post_id = JSON.parse(JSON.stringify(post_id));
             nextPage("Dossier", con);
@@ -211,6 +210,14 @@ var MainMenu = {
         post_excerpt.innerHTML = post_excerpt_txt_trim;
         let post_read_more = createElement("a", "btn btn-red");
         post_read_more.innerHTML = "أقرا المزيد";
+
+        let post_id = JSON.parse(JSON.stringify(iraqi_leauge_news[i]));
+
+        post_read_more.addEventListener("click", function () {
+            con.current_post_id = JSON.parse(JSON.stringify(post_id));
+            nextPage("Dossier", con);
+        });
+
         singl_post_card.appendChild(single_post_card_image);
         single_post_card_body.appendChild(post_title);
         single_post_card_body.appendChild(post_excerpt);
@@ -253,6 +260,13 @@ var MainMenu = {
         post_excerpt.innerHTML = post_excerpt_txt_trim;
         let post_read_more = createElement("a", "btn btn-red");
         post_read_more.innerHTML = "أقرا المزيد";
+
+        let post_id = JSON.parse(JSON.stringify(iraqi_team_news[i]));
+
+        post_read_more.addEventListener("click", function () {
+            con.current_post_id = JSON.parse(JSON.stringify(post_id));
+            nextPage("Dossier", con);
+        });
 
         singl_post_card.appendChild(single_post_card_image);
         single_post_card_body.appendChild(post_title);
